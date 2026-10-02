@@ -1,0 +1,28 @@
+# IR6500 Studio code style — Visual Studio and `dotnet format` read this file.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# Opening braces stay on the same line as the declaration / statement:
+#   public enum Glyph {
+#   if (x) {
+#   } else {
+#   } catch (Exception ex) {
+csharp_new_line_before_open_brace = none
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+
+[*.{csproj,slnx,props,targets,xml,manifest}]
+indent_style = space
+indent_size = 2
